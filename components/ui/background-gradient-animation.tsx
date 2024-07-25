@@ -3,16 +3,16 @@ import { cn } from "@/utils/cn";
 import { useEffect, useRef, useState } from "react";
 
 export const BackgroundGradientAnimation = ({
-  gradientBackgroundStart = "rgb(255, 0, 0)", 
-  gradientBackgroundEnd = "rgb(208, 13, 13)",  
-  firstColor = "255, 100, 100", 
+  gradientBackgroundStart = "rgb(255, 0, 0)",
+  gradientBackgroundEnd = "rgb(208, 13, 13)", 
+  firstColor = "255, 100, 100",
   secondColor = "255, 50, 50",  
-  thirdColor = "200, 0, 0",     
-  fourthColor = "150, 0, 0",    
-  fifthColor = "100, 0, 0",     
+  thirdColor = "200, 0, 0",   
+  fourthColor = "150, 0, 0",   
+  fifthColor = "100, 0, 0",    
   pointerColor = "255, 150, 150", 
   size = "80%",
-  blendingValue = "hard-light",
+  blendingValue = "normal", 
   children,
   className,
   interactive = true,
@@ -57,7 +57,18 @@ export const BackgroundGradientAnimation = ({
     document.body.style.setProperty("--pointer-color", pointerColor);
     document.body.style.setProperty("--size", size);
     document.body.style.setProperty("--blending-value", blendingValue);
-  }, []);
+  }, [
+    gradientBackgroundStart,
+    gradientBackgroundEnd,
+    firstColor,
+    secondColor,
+    thirdColor,
+    fourthColor,
+    fifthColor,
+    pointerColor,
+    size,
+    blendingValue,
+  ]);
 
   useEffect(() => {
     function move() {

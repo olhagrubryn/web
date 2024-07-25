@@ -55,16 +55,16 @@ export const BentoGridItem = ({
       {isIdThree && (
         <div className="absolute inset-0 rounded-xl overflow-hidden">
           <BackgroundGradientAnimation
-            gradientBackgroundStart="rgb(108, 0, 162)"
-            gradientBackgroundEnd="rgb(0, 17, 82)"
-            firstColor="18, 113, 255"
-            secondColor="221, 74, 255"
-            thirdColor="100, 220, 255"
-            fourthColor="200, 50, 50"
-            fifthColor="180, 180, 50"
-            pointerColor="140, 100, 255"
+            gradientBackgroundStart="rgb(255, 0, 0)" 
+            gradientBackgroundEnd="rgb(255, 165, 0)" 
+            firstColor="255, 100, 100" 
+            secondColor="255, 50, 50" 
+            thirdColor="0, 255, 255"   
+            fourthColor="255, 255, 0"
+            fifthColor="200, 0, 0"     
+            pointerColor="0, 255, 255" 
             size="100%"
-            blendingValue="hard-light"
+            blendingValue="normal"
             interactive={true}
             className="absolute inset-0"
           />
